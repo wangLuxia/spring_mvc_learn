@@ -15,5 +15,13 @@
 		<property name="prefix" value="/WEB-INF/views/jsp/"/>
 		<property name="suffix" value=".jsp"/>
 	</bean>
+	
+	<!-- 自定义拦截器 -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/mvc/**"/>
+			<bean class="com.luxia.MyInterceptor"/>
+		</mvc:interceptor>
+	</mvc:interceptors>
 
 </beans>
